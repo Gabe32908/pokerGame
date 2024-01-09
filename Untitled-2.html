@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+
+
+<script>
+    let num = 0;
+    let newNum=0;
+    const cards=[]
+    async function add()
+    {
+        let num= Math.floor(Math.random() * 53);
+
+       // cards.push(num);
+
+        let result= cards.indexOf(num)
+        console.log(result)
+        //if(result>0){
+         //   let num= Math.floor(Math.random() * 53);
+          //  cards.push(num);
+          //  console.log(num)
+       // }
+
+        document.getElementById('1').src= `${num}.png`;
+        await sleep(1)
+        document.getElementById('6').src= `${num}.png`;
+        await sleep (1)
+        document.getElementById('2').src= `${num}.png`;
+        await sleep (1)
+        document.getElementById('7').src= `${num}.png`;
+        await sleep (1)
+        document.getElementById('3').src= `${num}.png`;
+        await sleep (1)
+        document.getElementById('8').src= `${num}.png`;
+        await sleep (1)
+        document.getElementById('4').src= `${num}.png`;
+        await sleep (1)
+        document.getElementById('9').src= `${num}.png`;
+        await sleep (1)
+        document.getElementById('5').src= `${num}.png`;
+        await sleep (1)
+        document.getElementById('10').src= `${num}.png`;
+
+        if(result<0){
+            let num= Math.floor(Math.random() * 53);
+            cards.push(num);
+            //let num= Math.floor(Math.random() * 53);
+            //cards.push(num);
+            console.log(num)
+            console.log(cards)
+        }
+    }
+   
+
+
+   async function sleep(seconds){
+    return new Promise((resolve)=>setTimeout(resolve, seconds *1000));
+   }
+</script>
+<style>
+   .center {
+  display: block; 
+  margin-left: auto;
+   margin-right: auto; 
+}
+</style>
+<body>
+    
+
+
+
+    <img id='1'  class="rounded float-left" src="back.png" width="150">
+    
+   
+    <img id="2"  class="rounded float-left" src="back.png" width="150">
+
+
+    <img id='3'  class="rounded float-left" src="back.png" width="150">
+
+   
+    <img id="4"  class="rounded float-left"  src="back.png" width="150">
+
+   
+    <img id= '5'  class="rounded float-left"  src="back.png" width="150">
+    
+
+
+
+    <br>
+    <br>
+    
+        
+       
+            <img id='6'src="back.png" width="150">
+        
+       
+            <img id="7" src="back.png" width="150">
+        
+           
+            <img id='8'src="back.png" width="150">
+        
+           
+            <img id="9" src="back.png" width="150">
+        
+           
+            <img id= '10' src="back.png" width="150">
+        
+        
+        
+
+    
+    <button onclick="add()">START</button> 
+</body>
+</html>

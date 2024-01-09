@@ -1,0 +1,181 @@
+<html>
+
+<script>
+const cards=[]
+let num= Math.floor(Math.random() * 53);
+
+ let button =document.getElementsByTagName('img')
+
+    function add(){
+        document.getElementById('1').src= `${num}.png`;
+        setTimeout(swap,1000)
+        document.getElementById('11').disabled=true
+        cards.push(num);
+        let result= cards.indexOf(num);
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+        }
+        console.log(result)
+    }
+
+    function swap(){
+        let num= Math.floor(Math.random() * 53);
+        let result= cards.indexOf(num); 
+        document.getElementById('6').src= `${num}.png`;
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+            document.getElementById('6').src= `${num}.png`;
+            cards.push(num)
+        }
+      
+        setTimeout(swap2,1000)
+        console.log(result)
+    }
+
+function swap2(){
+    let num= Math.floor(Math.random() * 53);
+    cards.push(num);
+    document.getElementById('2').src= `${num}.png`;
+        let result= cards.indexOf(num);
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+            document.getElementById('2').src= `${num}.png`;
+            cards.push(num)
+        }
+    
+    setTimeout(swap3,1000);
+        console.log(result)
+    }
+
+function swap3(){
+    let num= Math.floor(Math.random() * 53);
+    let result= cards.indexOf(num);
+    document.getElementById('7').src= `${num}.png`;
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+            document.getElementById('7').src= `${num}.png`;
+            cards.push(num)
+        }
+    
+    setTimeout(swap4,1000)
+    cards.push(num);
+    console.log(result)
+    }
+
+
+function swap4(){
+    let num= Math.floor(Math.random() * 53);
+    let result= cards.indexOf(num);
+    document.getElementById('3').src= `${num}.png`;
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+            document.getElementById('3').src= `${num}.png`;
+            cards.push(num)
+        }
+   
+    setTimeout(swap5,1000)
+    cards.push(num);
+    console.log(result)
+    }
+
+
+
+function swap5(){
+    let num= Math.floor(Math.random() * 53);
+    let result= cards.indexOf(num);
+    document.getElementById('8').src= `${num}.png`;
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+            document.getElementById('8').src= `${num}.png`;
+            cards.push(num)
+        }
+    setTimeout(swap6,1000)
+    cards.push(num);
+    console.log(result)
+    }
+
+
+
+function swap6(){
+    let num= Math.floor(Math.random() * 53);
+    let result= cards.indexOf(num);
+    document.getElementById('4').src= `${num}.png`;
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+            document.getElementById('4').src= `${num}.png`;
+            cards.push(num)
+            console.lo
+        }
+    setTimeout(swap7,1000)
+    cards.push(num);
+    console.log(result);
+}
+
+function swap7(){
+    let num= Math.floor(Math.random() * 53);
+    let result= cards.indexOf(num);
+    document.getElementById('9').src= `${num}.png`;
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+            document.getElementById('9').src= `${num}.png`;
+            cards.push(num)
+        }
+
+    
+    setTimeout(swap8,1000)
+    cards.push(num);
+    console.log(result)
+}
+
+
+function swap8(){
+    let num= Math.floor(Math.random() * 53);
+    let result= cards.indexOf(num);
+    document.getElementById('5').src= `${num}.png`;
+        if(result>=0){
+            num= Math.floor(Math.random() * 53);
+            document.getElementById('5').src= `${num}.png`;
+            cards.push(num)
+        }
+    
+    setTimeout(swap9,1000)
+    cards.push(num);
+    console.log(result)
+
+}
+
+function swap9(){
+    let num= Math.floor(Math.random() * 53);
+    let result= cards.indexOf(num);
+    document.getElementById('10').src= `${num}.png`;
+        if(result>=0){
+        num= Math.floor(Math.random() * 53);
+            document.getElementById('10').src= `${num}.png`;
+            cards.push(num)
+        }
+    
+    cards.push(num);
+    console.log(cards)
+    console.log(result)
+}
+//console.log(cards)
+//console.log(Array.from({length: 10},() => num))
+</script>
+
+<body>
+<img id='1'src="back.png" width="150">
+<img id="2" src="back.png" width="150">
+<img id='3'src="back.png" width="150">
+<img id="4" src="back.png" width="150">
+<img id= '5' src="back.png" width="150">
+<br>
+<br>
+<img id='6' src="back.png" width="150">
+<img id="7" src="back.png" width="150">
+<img id="8" src="back.png" width="150">
+<img id="9" src="back.png" width="150">
+<img id="10" src="back.png" width="150">
+
+<button id='11' onclick="add()">START</button>
+</body>
+</html>
