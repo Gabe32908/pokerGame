@@ -1,0 +1,70 @@
+<html>
+<script>
+    
+    function createDeck(){
+        const cards =[]
+        for(let i=0; i<=52; i++){
+            cards.push(i)
+        }
+        return cards
+    }
+    const deck1= createDeck()
+    const deck2= createDeck()
+ function drawCard(){
+     let num = Math.floor(Math.random() * deck1.length);
+     deck1.splice(num,1)
+     console.log(num)
+     console.log(deck1)
+     return num
+    }
+
+   function displayCard(cardNum,number){
+        document.getElementById(cardNum).src=`${number}.png`
+    }
+
+    async function displayAll(){
+        displayCard('1',drawCard())
+        await sleep(1)
+        displayCard('6',drawCard())
+        await sleep(1) 
+        displayCard('2', drawCard())
+        await sleep(1)
+        displayCard('7',drawCard())
+        await sleep(1)
+        displayCard('3',drawCard())
+        await sleep(1) 
+        displayCard('8', drawCard())
+        await sleep(1)
+        displayCard('4',drawCard())
+        await sleep(1)
+        displayCard('9',drawCard())
+        await sleep(1) 
+        displayCard('5', drawCard())
+        await sleep(1)
+        displayCard('10',drawCard())
+    }
+
+    async function sleep(seconds){
+    return new Promise((resolve)=>setTimeout(resolve, seconds *1000));
+   }
+
+</script>
+<body>
+<img id='1'src="back.png" width="150">
+<img id="2" src="back.png" width="150">
+<img id='3'src="back.png" width="150">
+<img id="4" src="back.png" width="150">
+<img id= '5' src="back.png" width="150">
+<br>
+<br>
+<img id='6' src="back.png" width="150">
+<img id="7" src="back.png" width="150">
+<img id="8" src="back.png" width="150">
+<img id="9" src="back.png" width="150">
+<img id="10" src="back.png" width="150">
+
+<button id='11' onclick="displayAll()">START</button>
+<button id="12"> new game</button>
+</body>
+    
+</html>
